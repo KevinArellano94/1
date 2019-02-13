@@ -11,11 +11,12 @@
 		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 	
 	<body>
+		<div id="title"></div>
 		<div id="root"></div>
 		<script type="text/babel">
 			//  JSX Babel code goes here
-			ReactDOM.render(<h1>Hello React!</h1>, document.getElementById('root'));
+			ReactDOM.render(<h1>Hello React!</h1>, document.getElementById('title'));
+			ReactDOM.render(<h1>root</h1>, document.getElementById('root'));
 		</script>
-		<h1>React</h1>
 	</body>
 </html>
