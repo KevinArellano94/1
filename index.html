@@ -31,18 +31,13 @@
 			
 			import React, { Component } from 'react'
 			import tdata from '../tdata.json'
-			class tdata extends React.Component
-			{
-				render()
-				{
+			class tdata extends Component {
+				render() {
 					return(
 						<div>
-							{tdata.map((tdetail, index) =>
-							{
-								return <div>
-									<p>{tdetail.title}</p>
-									</div>
-							)}
+							{tdata.map((detail, index) => {
+								return <div><p>{detail.title}</p></div>
+							})}
 						</div>
 					)
 				}
