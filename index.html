@@ -13,10 +13,20 @@
 	<body>
 		<div id="title"></div>
 		<div id="root"></div>
+		<div id='app'></div>
 		<script type="text/babel">
 			//  JSX Babel code goes here
 			ReactDOM.render(<h1>Hello React!</h1>, document.getElementById('title'));
 			ReactDOM.render(<h1>root</h1>, document.getElementById('root'));
+			
+			class App extends React.Component
+			{
+				render()
+				{
+					return <p>Hello World React!</p>;
+				}
+			}
+			ReactDOM.render(<App />, document.getElementById('app'));
 		</script>
 	</body>
 </html>
