@@ -29,6 +29,17 @@
 				}
 			}
 			ReactDOM.render(<App />, document.getElementById('app'));
+			
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyBd7mOtf5kjkNeZSQdPNCNrwAP6012ncko",
+				authDomain: "test-31a42.firebaseapp.com",
+				databaseURL: "https://test-31a42.firebaseio.com",
+				projectId: "test-31a42",
+				storageBucket: "test-31a42.appspot.com",
+				messagingSenderId: "<SENDER_ID>",
+			};
+			firebase.initializeApp(config);
 		</script>
 	</body>
 </html>
