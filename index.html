@@ -29,39 +29,6 @@
 				}
 			}
 			ReactDOM.render(<App />, document.getElementById('app'));
-			
-			<!-- Firebase App is always required and must be first -->
-			<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
-
-			<!-- Add additional services that you want to use -->
-			<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-messaging.js"></script>
-			<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-functions.js"></script>
-
-			<!-- Comment out (or don't include) services that you don't want to use -->
-			<!-- <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-storage.js"></script> -->
-			// Initialize Firebase
-			var config =
-			{
-				apiKey: "AIzaSyBd7mOtf5kjkNeZSQdPNCNrwAP6012ncko",
-				authDomain: "test-31a42.firebaseapp.com",
-				databaseURL: "https://test-31a42.firebaseio.com",
-				projectId: "test-31a42",
-				storageBucket: "test-31a42.appspot.com",
-				messagingSenderId: "298488404420"
-			};
-			firebase.initializeApp(config);
-			
-			// Get a reference to the database service
-			var database = firebase.database();
-			
-			var userId = firebase.auth().currentUser.uid;
-			return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-			  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-			  // ...
-			});
 		</script>
 	</body>
 </html>
