@@ -1,10 +1,15 @@
-<h1>{{.PageTitle}}</h1>
-<ul>
-  {{range .Todos}}
-    {{if .Done}}
-      <li class="done">{{.Title}}</li>
-    {{else}}
-      <li>{{.Title}}</li>
-    {{end}}
-  {{end}}
-</ul>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>hello-wasm example</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, { greet } from "./pkg/hello_wasm.js";
+      init().then(() => {
+        greet("WebAssembly");
+      });
+    </script>
+  </body>
+</html>
